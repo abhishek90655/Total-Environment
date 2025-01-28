@@ -1,0 +1,286 @@
+/* General Styles */
+.sxi-offer-section {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sxi-offer-header {
+    text-align: left;
+    margin-bottom: 2px;
+  }
+  
+  .sxi-offer-title {
+    font-size: 2em;
+    margin-bottom: 2px;
+    color: #444;
+  }
+  
+  .sxi-offer-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 1em;
+  }
+  
+  .sxi-offer-description {
+    text-align: start;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 1em;
+    color: #666;
+  }
+  
+  /* Carousel Styles */
+  .sxi-project-gallery {
+    margin: 30px 0;
+  }
+  
+  .sxi-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+    touch-action: pan-y pinch-zoom;
+  }
+  
+  .sxi-carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .sxi-carousel-item {
+    flex: 0 0 calc(40% - 20px); /* Show 2.5 images on desktop */
+    text-align: center;
+    position: relative;
+  }
+  
+  .sxi-image-container {
+    position: relative;
+    overflow: hidden;
+    background: #f0f0f0;
+    border-radius: 8px;
+    transform: translateZ(0);
+  }
+  
+  .sxi-carousel-image,
+  .sxi-carousel-video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+    transform: translateZ(0);
+    will-change: opacity;
+  }
+  
+  .sxi-carousel-video {
+    background: #000; /* Black background for videos */
+  }
+  
+  .sxi-carousel-caption {
+justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+     display: flex;
+ overflow: hidden;
+  }
+  
+  .sxi-carousel-btn {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 5px 15px;
+    z-index: 5;
+    border-radius: 50%;
+    opacity: 1;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .sxi-carousel-btn.sxi-prev {
+    left: 5px;
+  }
+  
+  .sxi-carousel-btn.sxi-next {
+    right: 5px;
+  }
+  
+  .sxi-carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .sxi-carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+  
+  /* Loading Animation */
+  @keyframes sxi-shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  .sxi-image-loading,
+  .sxi-video-loading {
+    background: linear-gradient(
+      90deg,
+      #f0f0f0 25%,
+      #e0e0e0 50%,
+      #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: sxi-shimmer 1.5s infinite;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .sxi_section {
+      padding: 0 !important;
+    }
+    .sxi-offer-details {
+      flex-direction: column;
+      gap: 5px;
+      padding: 5px;
+    }
+    .sxi-offer-description {
+      margin-top: 1em;
+    }
+  
+    .sxi-offer-title {
+      font-size: 1.7em;
+    }
+  
+    .sxi-carousel-item {
+      flex: 0 0 calc(50% - 10px);
+    }
+  
+    .sxi-carousel-btn {
+      font-size: 1.2em;
+      padding: 2px 8px;
+    }
+  
+    .sxi-carousel-caption {
+      font-size: 0.9em;
+display: flex;
+    }
+  }
+   .sxi-cta-button {
+    height: 30px;
+    width: 90px;
+}
+  @media (max-width: 568px) {
+    .sxi-customized-section {
+      padding: 0px 0px 10px 0 !important;
+    }
+    .sxi-offer-section {
+      box-shadow: none;
+    }
+    .sxi-carousel-image,
+    .sxi-carousel-video {
+      height: 180px;
+    }
+    .sxi-offer-section {
+      margin: 5px;
+      padding: 10px;
+    }
+  
+    .sxi-offer-title {
+      font-size: 1.5em;
+    }
+  
+    .sxi-offer-details {
+      padding: 10px;
+    }
+  
+    .sxi-carousel-item {
+      flex: 0 0 calc(105% - 36px);
+      margin-right: 0;
+    }
+  
+    .sxi-carousel-caption {
+      font-size: 0.85em;
+   display: flex;
+
+
+    }
+  
+    .sxi-carousel-btn {
+      padding: 0 6px;
+      font-size: 1.3em;
+    }
+  }
+   .sxi-cta-button {
+    height: 30px;
+    width: 90px;
+}
+
+  /* Accessibility Improvements */
+  .sxi-carousel-btn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+  
+  /* Touch Device Optimizations */
+  @media (hover: none) {
+    .sxi-carousel-btn {
+      opacity: 0.8;
+    }
+  
+    .sxi-carousel-btn:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* Performance Optimizations */
+  .sxi-carousel-track,
+  .sxi-carousel-image,
+  .sxi-carousel-video,
+  .sxi-image-container {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+ .sxi-cta-button {
+    background-color: #f9f9f9; 
+    color: #444; 
+    padding: 3px 6px; 
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 12px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+   margin-left: 10px;
+    height: 30px;
+    width: 90px;
+
+
+}
+  
+  .sxi-cta-button:hover {
+    background-color: #444; 
+    color: #f9f9f9; 
+  }
